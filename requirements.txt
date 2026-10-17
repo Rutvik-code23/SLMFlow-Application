@@ -1,0 +1,12 @@
+# Backend dependencies for SLMFlow Medical AI.
+#
+# SLMFlow itself is NOT listed here on purpose: it is installed separately
+# from TestPyPI, because that is where the package is published.
+#
+#   python -m pip install --index-url https://test.pypi.org/simple/ --no-deps slmflow==0.1.1
+
+fastapi==0.143.3
+uvicorn[standard]==0.54.0
+python-multipart==0.0.32
+pypdf==6.21.0
+python-dotenv==1.2.4

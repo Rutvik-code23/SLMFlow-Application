@@ -1,0 +1,82 @@
+# =========================================================================
+# SLMFlow Medical AI - .gitignore
+# =========================================================================
+
+# --- Python virtual environment ------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python build / tooling artefacts ------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+sdist/
+wheels/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# --- Node / frontend ------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Application data (uploaded PDFs + SLMFlow JSONL run traces) ----------
+# Per-user runtime output; never belongs in the repo.
+backend/data/
+
+# --- Local configuration and secrets --------------------------------------
+# .env.example IS committed (it holds only defaults, no secrets).
+# .env is where real local overrides live.
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# --- Large local model weights (never commit these) -----------------------
+*.gguf
+*.bin
+*.safetensors
+models/
+*.onnx
+
+# --- Editor / IDE ---------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.nb/
+.project
+.settings/
+
+# --- OS noise -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+
+# --- Logs -----------------------------------------------------------------
+*.log
+logs/
